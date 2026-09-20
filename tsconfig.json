@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": true,
+
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "noImplicitThis": false,
+    "alwaysStrict": true,
+
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+
+    "allowJs": true,
+    "checkJs": false,
+    "sourceMap": true,
+
+    // "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "minivue": ["./src/libs/minivue.min.js", "./src/libs/minivue.d.ts"],
+      "minivue-extra": ["./src/libs/minivue-extra.min.js", "./src/libs/minivue-extra.d.ts"],
+      // Resolve intersecting reference
+      // ---
+      "lyco-ctxmenu": ["./src/indexes/lyco-ctxmenu.ts"],
+      "lyco-drag-exchange": ["./src/indexes/lyco-drag-exchange.ts"],
+      "lyco-flip": ["./src/indexes/lyco-flip.ts"],
+      "lyco-LRU": ["./src/indexes/lyco-LRU.ts"],
+      "lyco-playlist": ["./src/indexes/lyco-playlist.ts"],
+      "lyco-router": ["./src/indexes/lyco-router.ts"],
+      "lyco-shortcut": ["./src/indexes/lyco-shortcut.ts"],
+      "lyco-i18n": ["./src/indexes/lyco-i18n.ts"],
+      "minipastel": ["./src/indexes/minipastel.ts"],
+    },
+
+    "typeRoots": [
+      "./src/libs/**/*",
+      "./scripts/types/",
+      "node_modules/@types/",
+      // "!node_modules/@types/node/",
+    ],
+    // Whenever a new @types/[name] package been add, declare the [name] below (A rigid way since no typeRoots excluding option...)
+    "types": [
+    ]
+  },
+  "include": [
+    "src/**/*.ts", "src/**/*.js", ".env.d.ts",
+    "tests/**/*.ts",
+  ],
+  "exclude": [
+    "src/service-worker/**/*",
+    // "node_modules/@types/node/**/*",
+    // "node_modules/@types/node"
+  ]
+}

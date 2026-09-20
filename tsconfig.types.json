@@ -1,0 +1,69 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "outDir": "dist-types/",
+    "rootDir": "src/",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "removeComments": true, 
+    // "allowJs": true,
+    "checkJs": false,
+    
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "noImplicitThis": false,
+    "alwaysStrict": true,
+
+    "noUnusedLocals": false,
+    "importsNotUsedAsValues": "remove",
+    // "allowUnusedLabels": true,
+    
+    // "noErrorTruncation": true,
+
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    // "declarationDir": "./dist/@types/",
+    "declarationMap": false,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./src/libs/",
+      "node_modules/@types/"
+    ],
+    // "emitDecoratorMetadata": true,
+    // "experimentalDecorators": true,
+
+    // Manual module mapping
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "minivue": ["./src/libs/minivue.d.ts"],
+      "minivue-extra": ["./src/libs/minivue-extra.min.js", "./src/libs/minivue-extra.d.ts"],
+      // Resolve intersecting reference
+      // ---
+      "lyco-ctxmenu": ["./src/indexes/lyco-ctxmenu.ts"],
+      "lyco-drag-exchange": ["./src/indexes/lyco-drag-exchange.ts"],
+      "lyco-flip": ["./src/indexes/lyco-flip.ts"],
+      "lyco-LRU": ["./src/indexes/lyco-LRU.ts"],
+      "lyco-playlist": ["./src/indexes/lyco-playlist.ts"],
+      "lyco-router": ["./src/indexes/lyco-router.ts"],
+      "lyco-shortcut": ["./src/indexes/lyco-shortcut.ts"],
+      "lyco-i18n": ["./src/indexes/lyco-i18n.ts"],
+      "minipastel": ["./src/indexes/minipastel.ts"],
+    },
+    
+    // To solve the module pollutions
+    "lib": ["ESNext", "DOM", "DOM.Iterable"]
+  },
+
+  "include": [
+    "src/**/*",
+    // "tests/**/*",
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  
+}
